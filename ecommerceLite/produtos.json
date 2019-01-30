@@ -1,0 +1,33 @@
+[
+  {
+    "Codigo": "001",
+    "Nome": "SmartTV",
+    "PrecoDeFabrica": 1500.90,
+    "Descricao": "Smart TV LED 43'' Full HD LG 43LK5700 com IPS Inteligencia Artificial ThinQ AI WI-FI Processador Quad Core e HDR 10 Pro"
+  },
+  {
+    "Codigo": "002",
+    "Nome": "Lavadora",
+    "PrecoDeFabrica": 1521.90,
+    "Descricao": "Lavadora de Roupas Brastemp 11kg BWK11 - Branco"
+  },
+  {
+    "Codigo": "003",
+    "Nome": "Purificador",
+    "PrecoDeFabrica": 398.98,
+    "Descricao": "Purificador De Água Electrolux Branco Pe11b Bivolt Com Painel Touch"
+  },
+  {
+    "Codigo": "004",
+    "Nome": "Processador",
+    "PrecoDeFabrica": 159.89,
+    "Descricao": "Processador All In One Citrus Preto 1,2L + Liquidificador 2,2L + Espremedor de frutas 800W - Philco"
+  },
+  {
+    "Codigo": "005",
+    "Nome": "Geladeira",
+    "PrecoDeFabrica": 2557.99,
+    "Descricao": "Geladeira/Refrigerador Brastemp Frost Free 375 Litros BRM45 - Evox - 127v"
+  }
+
+]
