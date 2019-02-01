@@ -27,10 +27,11 @@ namespace ecommerceLite
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDistributedMemoryCache();
             services.AddSession();
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+           
 
             string connectionString = Configuration.GetConnectionString("Default");
 
@@ -68,8 +69,8 @@ namespace ecommerceLite
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSession();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

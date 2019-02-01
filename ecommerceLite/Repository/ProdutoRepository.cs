@@ -22,7 +22,7 @@ namespace ecommerceLite.Repository
 
         public IList<Produto> GetProdutos()
         {
-            return dbSet.ToList();
+            return dbSet.Where(p=> p.PrecoDeFabrica != 0).ToList();
         }
 
         public void SaveProdutos(List<Produto> produtos)

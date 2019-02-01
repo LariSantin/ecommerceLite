@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "NovoPreco";
+}
+@model IList<ItemCesta>;
+
+@foreach (var produto in Model)
+{
+    @produto.NovoSubtotal
+}
+@Model.Count()
+
+    <div class="container">
+        <h3>Resumo</h3>
+        <div class="list-group">
+            @foreach (var produto in Model)
+            {
+                <div class="list-group-item">
+                    <div class="panel-body">
+
+                        <div class="col-md-6">
+                            @(produto.Produto.Nome)
+                        </div>
+                        <div class="col-md-2">
+                            <a asp-action="listaitens" class="btn btn-success">Voltar a lista</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

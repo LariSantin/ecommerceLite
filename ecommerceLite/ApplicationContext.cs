@@ -22,9 +22,12 @@ namespace ecommerceLite
             modelBuilder.Entity<ItemCesta>().HasKey(t => t.Id);
             modelBuilder.Entity<ItemCesta>().HasOne(t => t.Pedido);
             modelBuilder.Entity<ItemCesta>().HasOne(t => t.Produto);
-
+           
             modelBuilder.Entity<Cesta>().HasKey(t => t.Id);
             modelBuilder.Entity<Cesta>().HasMany(t => t.Itens).WithOne(t => t.Pedido);
+
+            modelBuilder.Entity<adm>().HasKey(t => t.Id);
+
 
         }
     }

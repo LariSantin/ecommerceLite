@@ -26,6 +26,16 @@ namespace ecommerceLite.Controllers
         {
             return View(produtoRepository.GetProdutos());
         }
+        public ActionResult setDL()
+        {
+            return View();
+        }
+        public ActionResult NovoPreco()
+        {
+            var id = cestaRepository.getPedidoIdAux();
+
+            return View(itemCestaRepository.GetItens(Convert.ToDecimal(id)));
+        }
         public ActionResult Carrinho(string codigo)
         {
             if (!string.IsNullOrEmpty(codigo))
@@ -34,13 +44,23 @@ namespace ecommerceLite.Controllers
             }
             List<ItemCesta> itens = cestaRepository.GetPedido().Itens;
             CarrinhoViewModel carrinhoViewModel = new CarrinhoViewModel(itens);
-            
+           
             return View(carrinhoViewModel);
         }
+
         [HttpPost]
         public UpdateQuantidadeResponse UpdateQuantidade([FromBody]ItemCesta itemCesta)
         {
             return cestaRepository.UpdateQuantidade(itemCesta);
         }
+
+        [HttpPost]
+        public void despesas([FromBody]adm despesa)
+        {
+              
+            cestaRepository.AddDespesaLucro(despesa);
+            // cestaRepository.AddPrecoVenda();
+        }
     }
+   
 }

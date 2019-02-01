@@ -6,9 +6,11 @@
 
   <ItemGroup>
     <Content Remove="Views\Cesta\ListaItens.cshtml" />
+    <Content Remove="Views\Cesta\NovoPreco.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Cesta\NovoPreco.cshtml" />
     <None Include="Views\Cesta\ListaItens.cshtml" />
   </ItemGroup>
 

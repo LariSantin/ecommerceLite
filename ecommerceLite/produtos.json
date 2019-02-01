@@ -15,7 +15,7 @@
     "Codigo": "003",
     "Nome": "Purificador",
     "PrecoDeFabrica": 398.98,
-    "Descricao": "Purificador De Água Electrolux Branco Pe11b Bivolt Com Painel Touch"
+    "Descricao": "Purificador De Agua Electrolux Branco Pe11b Bivolt Com Painel Touch"
   },
   {
     "Codigo": "004",
@@ -28,6 +28,53 @@
     "Nome": "Geladeira",
     "PrecoDeFabrica": 2557.99,
     "Descricao": "Geladeira/Refrigerador Brastemp Frost Free 375 Litros BRM45 - Evox - 127v"
+  },
+  {
+    "Codigo": "006",
+    "Nome": "Smartphone Samsung Galaxy",
+    "PrecoDeFabrica": 1400.00,
+    "Descricao": "Smartphone Samsung Galaxy J8 64GB Dual Chip Android 8.0 Tela 6 Octa-Core 1.8GHz Camera 16MP -Prata"
+  },
+  {
+    "Codigo": "007",
+    "Nome": "Panela de Pressao",
+    "PrecoDeFabrica": 129.99,
+    "Descricao": "Panela de Pressao Tramontina Vancouver 4,5 Litros Aluminio - Grafite"
+  },
+  {
+    "Codigo": "008",
+    "Nome": "Canudos Inox",
+    "PrecoDeFabrica": 40.00,
+    "Descricao": "Canudos Inox Curvado - Kit com 4 Unidades e Escova Beegreen"
+  },
+  {
+    "Codigo": "009",
+    "Nome": "Robo Aspirador",
+    "PrecoDeFabrica": 999.99,
+    "Descricao": "Robo Aspirador Ropo Glass 2"
+  },
+  {
+    "Codigo": "010",
+    "Nome": "Aspirador de Po",
+    "PrecoDeFabrica": 129.80,
+    "Descricao": "Aspirador Po Philco Ph1100 Rapid Turbo 2 em 1 Vermelho - 1000W"
+  },
+  {
+    "Codigo": "011",
+    "Nome": "Fritadeira",
+    "PrecoDeFabrica": 294.99,
+    "Descricao": "Fritadeira Philco Air Fry Saúde Inox PH 3,2 Litros Preto"
+  },
+  {
+    "Codigo": "012",
+    "Nome": "Cafeteira",
+    "PrecoDeFabrica": 369.00,
+    "Descricao": "Cafeteira Expresso Arno Nescafé Dolce Gusto Lumio 15 BAR - Preta"
+  },
+  {
+    "Codigo": "013",
+    "Nome": "Batedeira",
+    "PrecoDeFabrica": 227.99,
+    "Descricao": "Batedeira Cadence BAT550 Orbital Orbit Black Premium 8 Velocidades Preto/Inox - 400w"
   }
-
 ]

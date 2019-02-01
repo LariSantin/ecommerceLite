@@ -15,5 +15,9 @@ namespace ecommerceLite.Models.ViewModels
         public IList<ItemCesta> Itens { get; }
 
         public decimal Total => Itens.Sum(i => i.Quantidade * i.Produto.PrecoDeFabrica);
+
+        public decimal NovoTotal => Itens.Sum(i => i.Quantidade * i.PrecoVenda);
+
+
     }
 }

@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 namespace ecommerceLite.Models
 {
-
+    [DataContract]
     public class BaseModel
     {
         [DataMember]
@@ -46,11 +46,12 @@ namespace ecommerceLite.Models
         {
         }
 
-        public ItemCesta(Cesta pedido, Produto produto, int quantidade)
+        public ItemCesta(Cesta pedido, Produto produto, int quantidade, decimal precoUnitario)
         {
             Pedido = pedido;
             Produto = produto;
             Quantidade = quantidade;
+            PrecoUnitario = precoUnitario;
         }
 
         [Required]
@@ -64,13 +65,30 @@ namespace ecommerceLite.Models
         [Required]
         [DataMember]
         public int Quantidade { get; private set; }
+        [Required]
+        [DataMember]
+        public decimal PrecoUnitario { get; private set; }
+        [DataMember]
+        public decimal Subtotal => Quantidade * PrecoUnitario;
 
+        [Required]
+        [DataMember]
+        public decimal PrecoVenda { get; private set; }
+
+        [DataMember]
+        public decimal NovoSubtotal => Quantidade * PrecoVenda;
+
+        internal void AtualizaPrecoVEnda(decimal novopreco)
+        {
+            PrecoVenda = novopreco;
+        }
         internal void AtualizaQuantidade(int quantidade)
         {
             Quantidade = quantidade;
         }
     }
 
+    [DataContract]
     public class Cesta : BaseModel
     {
         public Cesta()
@@ -80,10 +98,16 @@ namespace ecommerceLite.Models
 
         public List<ItemCesta> Itens { get; private set; } = new List<ItemCesta>();
 
-        [Required]
-        [DataMember]
-        public double TotalCompra { get; private set; }
+    }
 
+    [DataContract]
+    public class adm : BaseModel
+    {
+        public adm(double despesasTotais, double margemLucro)
+        {
+            DespesasTotais = despesasTotais;
+            MargemLucro = margemLucro;
+        }
         [Required]
         [DataMember]
         public double DespesasTotais { get; private set; }
@@ -92,6 +116,14 @@ namespace ecommerceLite.Models
         [DataMember]
         public double MargemLucro { get; private set; }
 
+        internal void AtualizaDespesa(double despesa)
+        {
+            DespesasTotais = despesa;
+        }
 
+        internal void AtualizaMargem(double margem)
+        {
+            MargemLucro = margem;
+        }
     }
 } 
