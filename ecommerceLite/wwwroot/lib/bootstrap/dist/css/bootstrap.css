@@ -2548,7 +2548,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 35%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -3057,9 +3057,10 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-    color: #326c3c;
-    background-color: #fff;
-    border-color: #7aff91;
+    color: #060606;
+    background-color: #b9b9b9;
+    border-color: #89928b;
+    
 }
 .btn-default:focus,
 .btn-default.focus {
@@ -4589,12 +4590,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
-  border-color: #080808;
+    background-color: #0c0c0c;
+    border-color: #080808;
 }
-.navbar-inverse .navbar-brand {
-  color: #9d9d9d;
-}
+    .navbar-inverse .navbar-brand {
+        color: #efefef;
+    }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
   color: #fff;
@@ -4603,9 +4604,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-text {
   color: #9d9d9d;
 }
-.navbar-inverse .navbar-nav > li > a {
-  color: #9d9d9d;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: #ffffff
+    }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #fff;

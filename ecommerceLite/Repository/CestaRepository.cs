@@ -126,15 +126,14 @@ namespace ecommerceLite.Repository
                                .Where(i => i.Id == codigo)
                                .SingleOrDefault();
 
-            var quantidadeItens = contexto.Set<ItemCesta>()
-                             .Where(i => i.Pedido.Id == pedido).Count();
+            var quantidadeItens = contexto.Set<Produto>().Count();
 
             if (cestaExiste != null && itemcestaExiste != null)
             {
                 decimal rateio;
                 decimal novoPreco;
 
-                if (admExiste.DespesasTotais == 0 || admExiste == null)
+                if (admExiste == null)
                 {
                     rateio = Convert.ToDecimal(400.00) / quantidadeItens;
                 }
@@ -144,7 +143,7 @@ namespace ecommerceLite.Repository
                 }
                 
                 decimal preco = rateio + itemcestaExiste.PrecoUnitario;
-                if (admExiste.MargemLucro == 0 || admExiste == null)
+                if (admExiste == null)
                 {
                     novoPreco = preco;
                 }
@@ -165,8 +164,7 @@ namespace ecommerceLite.Repository
          
             Console.WriteLine("-----------------------------------------");
             var itemCestaDb = itemCestaRepository.GetItemCesta(itemCesta.Id);
-            Console.WriteLine(itemCestaDb.Id);
-
+           
             if (itemCestaDb != null)
             {
                 itemCestaDb.AtualizaQuantidade(itemCesta.Quantidade);
